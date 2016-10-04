@@ -89,17 +89,18 @@ $(function () {
                 };
                 headerLis[i].getElementsByTagName("a")[0].style.color="#FFA21E";   
                 dds[i].getElementsByTagName("a")[0].className="checked";  
+
                 var bottoms=this.getElementsByClassName("bottom");
-                for (var i = 0; i < bottoms.length; i++) {
-                    bottoms[i].style.transform="translate(0,0)";
+                for (var k = 0; k < bottoms.length; k++) {
+                    bottoms[k].style.transform="translate(0,0)";
                 };
                 var lefts=this.getElementsByClassName("lefts");
-                for (var i = 0; i < lefts.length; i++) {
-                    lefts[i].style.transform="translate(0,0)";
+                for (var k = 0; k < lefts.length; k++) {
+                    lefts[k].style.transform="translate(0,0)";
                 };   
                 var rights=this.getElementsByClassName("rights");
-                for (var i = 0; i < rights.length; i++) {
-                    rights[i].style.transform="translate(0,0)";
+                for (var k = 0; k < rights.length; k++) {
+                    rights[k].style.transform="translate(0,0)";
                 };                             
             }
         };
@@ -181,6 +182,7 @@ $(function () {
     var addmore=$(".sec4-more-button")
     addmore.click(function(){
         $(".hidden").css({display:"block"})
+        location.href="https://github.com/xiaolianduan"
     })
 
     //欢迎界面
