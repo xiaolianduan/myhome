@@ -88,12 +88,21 @@ $(function () {
                     dds[j].getElementsByTagName("a")[0].className="";                 
                 };
                 headerLis[i].getElementsByTagName("a")[0].style.color="#FFA21E";   
-                dds[i].getElementsByTagName("a")[0].className="checked";      
+                dds[i].getElementsByTagName("a")[0].className="checked";  
+                var bottoms=this.getElementsByClassName("bottom");
+                for (var i = 0; i < bottoms.length; i++) {
+                    bottoms[i].style.transform="translate(0,0)";
+                };
+                var lefts=this.getElementsByClassName("lefts");
+                for (var i = 0; i < lefts.length; i++) {
+                    lefts[i].style.transform="translate(0,0)";
+                };   
+                var rights=this.getElementsByClassName("rights");
+                for (var i = 0; i < rights.length; i++) {
+                    rights[i].style.transform="translate(0,0)";
+                };                             
             }
         };
-
-
-
 
         //导航字体颜色问题
         for (var j = 0; j < headerLis.length; j++) {
@@ -155,7 +164,7 @@ $(function () {
             for (var j = 0; j < sec4imgLis.length; j++) {
                 sec4imgLis[j].style.display="none"
                 if (this.innerHTML==sec4imgLis[j].className) {
-                      sec4imgLis[j].style.display="block"  
+                    sec4imgLis[j].style.display="block"  
                 };    
                 if(this.innerHTML=="show all"){
                     sec4imgLis[j].style.display="block"
@@ -170,9 +179,22 @@ $(function () {
 
     //add more
     var addmore=$(".sec4-more-button")
-    var hiddens=$(".hidden")
     addmore.click(function(){
-        hiddens.css({display:"block"})
+        $(".hidden").css({display:"block"})
     })
 
-})
+    //欢迎界面
+    function welcome(){
+        $(".jinru").css({opacity:1})
+        $(".range").animate({width:"100%"},2000,function(){
+            $(".huanying").animate({opacity:0},function(){
+                $(".huanying").css({display:"none"})
+            })
+        })     
+        setInterval(function(){
+            var baifenbi=Math.round(parseInt($(".range").css("width"))/5)+"%"
+            $(".baifen").html(baifenbi)
+        },60) 
+    }
+    welcome()
+}) 
