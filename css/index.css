@@ -1,0 +1,597 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+}
+img{
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #ccc;
+}
+li{
+	list-style: none;
+}
+/*导航*/
+header{
+	width: 100%;
+	height: 130px;	
+	position: fixed;
+	left: 0;right: 0;
+	margin: auto;
+	top: 0;
+	z-index: 999;
+	background: rgba(0,0,0,0);
+	transition: all 1s ease;
+}
+.header{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;right: 0;
+	margin: auto;
+	top: 0;
+	transition: all 1s ease;
+	padding:0 7%;
+}
+header .logo{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+header .logo img{
+	position: absolute;
+	top: 0;bottom: 0;
+	margin: auto;
+	left: 7%;
+}
+header .nav{
+	float: right;
+}
+header .nav li{
+	float: left;
+	color: red;
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 130px;
+}
+header .nav li a{
+	color: white;
+	transition:all 0.3s ease;
+}
+header .nav li a:hover{
+	color: #FFA21E;	
+}
+header .movie{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+header .movie span{
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;bottom: 0;
+	margin: auto;
+	right: 7%;
+	font-size: 30px;
+	line-height: 30px;
+	color: white;
+	cursor: pointer;
+	z-index: 999;
+}
+header .movie .list{
+	width: 100%;
+	height: 650px;
+	background:rgba(0,0,0,1);
+	background-clip:content-box;
+	position: absolute;
+	left:0;
+	top:0;
+	border-top:100px solid rgba(0,0,0,0);
+	z-index: 888;
+	display: none;
+/*	overflow: hidden;*/
+	font-weight: bold;
+}
+header .movie .list dd{
+	margin-left:8%;
+	width: 84%;
+	font-size: 15px;
+	text-align: left;
+	line-height: 55px;
+	border-bottom:  1px solid #333;
+	padding-left: 20px;
+}
+header .movie .list dd a{
+	color: #ECEFF3;
+	cursor: pointer;
+}
+header .movie .list dd a:hover{
+	color: #FFA21E;		
+}
+header .movie .list dd a.checked{
+	color: #FFA21E;	
+}
+header .nav li a.checked{
+	color: #FFA21E;
+}
+/*首页*/
+.home{
+	width: 100%;
+	height: auto;
+	position: relative;
+	text-align: center;
+	
+	font-family: Raleway, "Times New Roman", Times, sans-serif;
+	font-weight: bold;
+	color: white;
+	overflow: hidden;
+}
+.home video{
+	position: absolute;
+	display: inline-block;
+	vertical-align: baseline;
+	min-width: 100%;
+	min-height: 100%;
+	left:0;
+	top: 0;
+}
+.sec1-contain{
+	position: absolute;
+	width: 100%;
+	top: 25%;
+	left: 0;
+	z-index: 50;
+}
+.sec1-head{
+	width: 200px;
+	height: 200px;
+	padding: 5px; 
+	background: rgba(244,244,244,.57);
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.sec1-head img{
+	width: 190px;
+	border-radius: 50%;
+}
+.sec1-name{
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: none;
+	margin-top: 10px;
+}
+.sec1-contain h1{
+	font-size: 28px;
+	margin: 0px;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-family: "Raleway";
+	font-weight: bold;
+	margin: 10px;
+}
+.sec1-job{
+	font-size: 30px;
+}
+
+/*关于我*/
+.aboutMe{
+	width: 100%;
+	position: relative;
+	background: url(../images/shu2.jpg);
+	background-size: cover;
+	overflow: hidden;
+/*	background-attachment: fixed;*/
+}
+.sec2-top{
+	width: 45%;
+	height: auto;
+	margin: 150px auto  50px;
+}
+.sec2-top .sec2-title{
+	font-size: 28px;
+	text-align: center;
+	font-weight: 600;
+	font-family: "Raleway";
+	color: white;
+}
+.sec2-hengxian{
+	width: 120px;
+	height: 1px;
+	background: #FFA21E;
+	margin: 20px auto
+}
+.sec2-contain{
+	font-size: 16px;
+	color: #ddd;
+	text-align: center;
+}
+.sec2-container{
+	width: 80%;
+	height: auto;
+	margin: 30px auto;
+}
+.sec2-container p{
+	text-align:center;
+	font-size:14px;
+	color:#000;
+	line-height:27px;
+	width:100%;
+	margin:0 auto;
+	margin-top:20px;
+	color: #eee;
+}
+
+/*技能展示*/
+.skill{
+	width: 100%;
+	height: auto;
+	position: relative;
+	background: url(../images/kff.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.sec3-top{
+	width: 45%;
+	height: auto;
+	margin: 150px auto 0;
+}
+.sec3-top .sec3-title{
+	font-size: 28px;
+	text-align: center;
+	font-weight: 600;
+	font-family: "Raleway";
+	color: white;
+}
+.sec3-hengxian{
+	width: 120px;
+	height: 1px;
+	background: #FFA21E;
+	margin: 20px auto
+}
+.sec3-contain{
+	font-size: 14px;
+	color: #ddd;
+	text-align: center;
+}
+.sec3-range{
+	width: 86%;
+	height: auto;
+	overflow: hidden;
+	margin: 70px auto 100px;
+}
+.sec3-range li{
+	width: 50%;
+	height: 80px;
+	margin-top: 20px;
+	float: left;
+	color: #ECEFF3;
+}
+.sec3-range li h3{
+	font-size: 24px;
+}
+.sec3-range li div{
+	width: 95%;
+	height: 8px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
+	margin: 20px 0;
+}
+.sec3-range li div .sec3-son{
+	width: 80%;
+	height: 100%;
+	border-radius: 4px;
+	background: #FFA200;
+}
+
+
+.sec3-bottom{
+	width: 86%;
+	height: auto;
+	margin:0 auto 130px;
+	overflow: hidden;
+}
+.sec3-skillcontain{
+	width: 200%;
+	height: auto;
+	margin-left: 0;
+	transition:all 1s ease;
+}
+.skillcontain-title{
+	font-size: 16px;
+	color: #eee;
+	line-height: 40px;
+}
+.skillcontain-title span{
+	font-size: 24px;
+	color:#FFA200;	
+	margin-right: 10px;
+}
+.sec3-skillcontain li{
+	width: 16.6666%;
+	height: auto;
+	float: left;
+	color: #ECEFF3;
+	font-size: 13px;
+	line-height: 1.7em;
+}
+.sec3-skillcontain-son{
+	width:95%;
+	height: 210px;
+	border-radius:10px;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 20px 30px 30px;
+}
+.sec3-skillcontain li:last-child{
+	margin: 0;
+}
+
+.sec3-btnbox{
+	width:40px;
+	height: 10px;
+	position: absolute;
+	left: 0;right: 0;
+	margin: auto;
+	bottom: 80px;
+}
+.sec3-btnbox li{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	margin-right:10px;
+	background: #BBB;
+	float: left;
+	cursor: pointer;
+}
+.sec3-btnbox li.checked{
+	background: #EEE;	
+}
+.sec3-btnbox li:last-child{
+	margin: 0;
+}
+.sec3-btnbox.hide{
+	display: none;
+}
+.sec3-btnbox li.maxhide{
+	display: none;
+}
+
+/*项目屏*/
+
+.project{
+	width: 100%;
+	height: auto;
+	position: relative;
+	background: #222222;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.sec4-top{
+	width: 45%;
+	height: auto;
+	position: relative;
+	margin: 100px auto 0;
+}
+.sec4-top .sec4-title{
+	font-size: 28px;
+	text-align: center;
+	font-weight: 600;
+	font-family: "Raleway";
+	color: white;
+}
+.sec4-hengxian{
+	width: 120px;
+	height: 1px;
+	background: #FFA21E;
+	margin: 20px auto
+}
+.sec4-contain{
+	font-size: 14px;
+	color: #ddd;
+	text-align: center;
+}
+.sec4-nav{
+	width: 73%;
+	height: auto;
+	margin: 50px auto;
+}
+.sec4-nav li{
+	height: auto;
+	float: left;
+	text-align: center;
+	padding: 0 15px;
+	line-height: 30px;
+	transition:all 1s ease;
+	margin-right: 10px;
+	border-radius: 2px;
+	color: #eee;
+	cursor: pointer;
+}
+.sec4-nav li:hover{
+	background: white;
+	color: #111;
+}
+.sec4-nav li.checked{
+	background: #FFA200;
+}
+
+.sec4-img{
+	width: 95%;
+	height: auto;
+	position: relative;
+	margin:150px auto 0;
+	overflow: hidden;
+	transition:all 1s ease;
+}
+.sec4-img .hidden{
+	display: none;
+}
+.sec4-img li{
+	width: 33.33%;
+	height: auto;
+	float: left;
+	cursor: pointer;
+	transition:all 1s ease;
+}
+.sec4-img li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.sec4-img li img{
+	width: 100%;
+}
+.sec4-img li h3{
+	font-size: 15px;
+}
+.sec4-img li p{
+	font-size: 13px;
+	height: 18px;
+	line-height: 18px;
+}
+.sec4-img li .sec4-imgbox{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	color: #aaa;
+	margin: 0 auto 50px;
+}
+.sec4-more{
+	width: 100%;
+	height: 150px;
+	background: #FFA200;
+	position: relative;
+	margin: 70px auto 0;
+}
+.sec4-more-button{
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	left: 0;right: 0;top: 0;bottom: 0;
+	margin: auto;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: #FFF;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	transition:all 1s ease;
+}
+.sec4-more-button:hover{
+	background: white;
+	color: #111;	
+}
+
+/*请联系我*/
+.connect{
+	width: 100%;
+	height: auto;
+	position: relative;
+	background: url(../images/ff.png);
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.sec5-top{
+	width: 45%;
+	height: auto;
+	position: relative;
+	margin: 150px auto 0;
+}
+.sec5-top .sec5-title{
+	font-size: 28px;
+	text-align: center;
+	font-weight: 600;
+	font-family: "Raleway";
+	color: white;
+}
+.sec5-hengxian{
+	width: 120px;
+	height: 1px;
+	background: #FFA21E;
+	margin: 20px auto
+}
+.sec5-contain{
+	font-size: 14px;
+	color: #ddd;
+	text-align: center;
+}
+.sec5-bottom{
+	width: 86%;
+	height: 300px;
+	margin: 50px auto;
+}
+.sec5-left{
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+.sec5-left input{
+	width: 48%;
+	height: 35px;
+	border: 1px solid #555;
+	background: rgba(0, 0, 0, 0.3);
+	color: #ccc;
+	padding-left: 5px;	
+	font-size: 15px;
+}
+.sec5-left .email{
+	float: right;
+}
+.sec5-left .message{
+	width: 100%;
+	height: 110px;
+	border: 1px solid #555;
+	background: rgba(0, 0, 0, 0.3);
+	margin:20px auto;
+	color: #ccc;
+	padding-left: 3px;	
+	font-size: 15px;
+}
+.sec5-left .button{
+	width: 120px;
+	height: 35px;
+	color: #eee;
+	padding:0;
+	cursor: pointer;
+	transition:all 1s ease;
+}
+.sec5-left .button:hover{
+	background:#F4A200; 
+}
+.sec5-right{
+	width: 35%;
+	height: auto;
+	padding-left: 30px;
+	float: right;
+	margin-top:-15px;
+}
+.sec5-right li{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	border-bottom: 1px solid #555;
+	font-weight: 300;
+	color: #EEE;
+}
+.sec5-right span{
+	color: #F4A200;
+	font-size: 20px;
+	margin-right: 15px;
+}
+
+/*脚部*/
+#foot{
+	width: 100%;
+	height: 150px;
+	background: #222222;
+}
