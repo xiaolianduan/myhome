@@ -437,6 +437,10 @@
     .sec5-right{
       margin: auto;
       float: none;
+      text-align: center;
+    }
+    .sec5-right li{
+      border: none;
     }
 
 }
